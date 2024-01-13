@@ -1,0 +1,65 @@
+---
+import '../styles/globals.css';
+import '../styles/bootstrap.min.css';
+import '../styles/plugin.min.css';
+import '../styles/style.css';
+import '../styles/responsive.css';
+import '../styles/darkmode.css';
+
+// import '../styles/all.min.css';
+import SEO from '../components/SEO.astro';
+import { ViewTransitions } from 'astro:transitions';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  siteName?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterHandle?: string;
+  slug?: string;
+}
+
+const {
+  title,
+  description,
+  siteName = 'cliqbait',
+  canonical,
+  ogImage,
+  ogType,
+  twitterHandle,
+  slug,
+} = Astro.props as Props;
+---
+
+<html lang="en" data-wf-page="64bfe8a9dae517c64fcaa4ea" data-wf-site="64b117fb0e09e8ce5768e4fe">
+  <head>
+    <SEO {...{ title, description, siteName, canonical, ogImage, ogType, twitterHandle, slug }} />
+    <ViewTransitions fallback="swap" />
+    <!-- <script src="../scripts/gsap"></script> -->
+  </head>
+
+  <body class="">
+    <!--Start Preloader -->
+    <div class="onloadpage" id="page_loader">
+      <div class="pre-content">
+        <div class="logo-pre"><img src="images/logo.png" alt="Logo" class="img-fluid" /></div>
+        <div class="pre-text- text-radius text-light text-animation bg-b">
+          AlifSense - Creative Agency & Portfolio HTML Template Are 2 Seconds Away. Have Patience
+        </div>
+      </div>
+    </div>
+    <!--End Preloader -->
+    <slot />
+    <script is:inline src="/js/modernizr-3.5.0.min.js"></script>
+    <script is:inline src="/js/jquery.min.js"></script>
+    <script is:inline src="/js/bootstrap.bundle.min.js"></script>
+    <script is:inline src="/js/plugin.min.js"></script>
+    <script is:inline src="js/preloader.js"></script>
+
+    <script is:inline src="/js/dark-mode.js"></script>
+    <script is:inline src="/js/main.js"></script>
+    <script is:inline src="//js-eu1.hs-scripts.com/143778338.js" id="hs-script-loader"></script>
+  </body>
+</html>

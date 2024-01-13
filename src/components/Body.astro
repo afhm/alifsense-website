@@ -1,0 +1,627 @@
+---
+import { Image } from 'astro:assets';
+import img1 from '../assets/Images/new_images/image6.jpg';
+import img2 from '../assets/Images/new_images/image2.jpg';
+import img3 from '../assets/Images/new_images/image1.jpg';
+
+import img4 from '../assets/Images/portfolio/portfolio-wide-3a.png';
+import img5 from '../assets/Images/portfolio/portfolio-wide-4.png';
+import img6 from '../assets/Images/portfolio/portfolio-wide-3.png';
+import img7 from '../assets/Images/portfolio/portfolio-wide-2.png';
+---
+
+{/* <!--Mobile contact--> */}
+<div class="popup-modal1">
+  <div class="modal" id="menu-popup">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="common-heading">
+            <h4 class="mt0 mb0">Write a Message</h4>
+          </div>
+          <button type="button" class="closes" data-bs-dismiss="modal"> &times;</button>
+        </div>
+        {/* <!-- Modal body --> */}
+        <div class="modal-body">
+          <div class="form-block fdgn2 mt10 mb10">
+            <form action="#" method="post" name="feedback-form">
+              <div class="fieldsets row">
+                <div class="col-md-12">
+                  <input type="text" placeholder="Full Name" name="name" />
+                </div>
+                <div class="col-md-12">
+                  <input type="email" placeholder="Email Address" name="email" />
+                </div>
+                <div class="col-md-12">
+                  <input type="number" placeholder="Contact Number" name="phone" />
+                </div>
+                <div class="col-md-12">
+                  <input type="text" placeholder="Subject" name="subject" />
+                </div>
+                <div class="col-md-12">
+                  <textarea placeholder="Message" name="message"></textarea>
+                </div>
+              </div>
+              <div class="fieldsets mt20 pb20">
+                <button type="submit" name="submit" class="lnk btn-main bg-btn" data-bs-dismiss="modal">
+                  Submit <i class="fas fa-chevron-right fa-icon"></i>
+                  <span class="circle"></span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/* <!--Mobile contact--> */}
+
+{/* <!--End Header --> */}
+
+{/* <!--Start sidebar --> */}
+<div class="niwaxofcanvas offcanvas offcanvas-end" tab-index={-1} id="offcanvasExample">
+  <div class="offcanvas-body">
+    <div class="cbtn animation">
+      <div class="btnclose">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="form-block sidebarform">
+      <h4>Request A Quote</h4>
+      <form id="contactForm" data-bs-toggle="validator" class="shake mt20">
+        <div class="row">
+          <div class="form-group col-sm-12">
+            <input type="text" id="name" placeholder="Enter name" required data-error="Please fill Out" />
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group col-sm-12">
+            <input type="email" id="email" placeholder="Enter email" required />
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-sm-12">
+            <input type="text" id="mobile" placeholder="Enter mobile" required data-error="Please fill Out" />
+            <div class="help-block with-errors"></div>
+          </div>
+          <div class="form-group col-sm-12">
+            <select name="Dtype" id="Dtype" required>
+              <option value="">Select Requirement</option>
+              <option value="web">web</option>
+              <option value="graphic">graphic</option>
+              <option value="video">video</option>
+            </select>
+            <div class="help-block with-errors"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows={5} placeholder="Enter your message" required></textarea>
+          <div class="help-block with-errors"></div>
+        </div>
+        <button type="submit" id="form-submit" class="btn lnk btn-main bg-btn">
+          Submit <span class="circle"></span>
+        </button>
+        <div id="msgSubmit" class="h3 text-center hidden"></div>
+        <div class="clearfix"></div>
+      </form>
+    </div>
+    {
+      /* <div class="getintouchblock mt30">
+        <h4>Get In Touch</h4>
+        <p class="mt10">Please fill out the form below if you have a plan or project in mind that you&apos;d like to share
+          with us.</p>
+        <div class="media mt15">
+          <div class="icondive">
+            <Image
+                    src={&apos;/images/icons/call.svg&apos;}
+                    alt={"icon"}
+                    width={100}
+                    height={100}
+       
+                  />
+            </div>
+          <div class="media-body getintouchinfo">
+            <a href="tel:123456790">+91-123 4567 890 <span>Mon-Fri 9am - 6pm</span></a>
+          </div>
+        </div>
+        <div class="media mt15">
+          <div class="icondive"><Image  width={100} height={100}src="assets/Images/icons/whatsapp.svg" alt="icon" /></div>
+          <div class="media-body getintouchinfo">
+            <a href="tel:123456790">+91-123 4567 890 <span>Mon-Fri 9am - 6pm</span></a>
+          </div>
+        </div>
+        <div class="media mt15">
+          <div class="icondive"><Image  width={100} height={100}src="assets/Images/icons/mail.svg" alt="icon" /></div>
+          <div class="media-body getintouchinfo">
+            <a href="mailto:info@website.com">info@website.com <span>Online Support</span></a>
+          </div>
+        </div>
+        <div class="media mt15">
+          <div class="icondive"><Image  width={100} height={100}src="assets/Images/icons/map.svg" alt="icon" /></div>
+          <div class="media-body getintouchinfo">
+            <a href="mailto:info@website.com">Jaipur, Rajasthan, India<span>Visit Our Office</span></a>
+          </div>
+        </div>
+      </div> */
+    }
+    <div class="contact-data mt30">
+      <h4>Follow Us On:</h4>
+      <div class="social-media-linkz mt10">
+        <a href="javascript:void(0)" target="blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="javascript:void(0)" target="blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="javascript:void(0)" target="blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="javascript:void(0)" target="blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="javascript:void(0)" target="blank">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="javascript:void(0)" target="blank">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{/* <!--end sidebar --> */}
+
+{/* <!--Start work-category--> */}
+<section class="work-category pad-tb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="common-heading ptag">
+          <span>We Have Worked Across Multiple Industries</span>
+          <h2>Industries We Serve</h2>
+          <p>
+            Our team has experience working with a variety of industries. No matter what industry you&apos;re in, we
+            have the skills and expertise to build a website that meets your business needs.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row mt30">
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.1s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/house.svg" alt="img" />
+
+          <Image src="/images/icons/house.svg" alt={'service'} width={100} height={100} />
+          <h6>Real estate</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.3s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/travel-case.svg" alt="img" />
+          <h6>Tour &amp; Travels</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.5s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/video-tutorials.svg" alt="img" />
+          <h6>Education</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.7s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/taxi.svg" alt="img" />
+          <h6>Transport</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.1s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/smartphone.svg" alt="img" />
+          <h6>eCommerce</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.5s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/healthcare.svg" alt="img" />
+          <h6>Healthcare</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.9s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/baker.svg" alt="img" />
+          <h6>Restaurant</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="2.1s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/mobile-app.svg" alt="img" />
+          <h6>On-Demand</h6>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 col-6 wow fadeIn" data-wow-delay="2.3s">
+        <div class="industry-workfor hoshd">
+          <Image width={100} height={100} src="/images/icons/groceries.svg" alt="img" />
+          <h6>Grocery</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* <!--End  work-category--> */}
+
+{/* <!--why choose--> */}
+<section class="why-choos-lg-nx pad-tb deep-dark bg-gradient10" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="common-heading text-l">
+          <span>Why Choose Us</span>
+          <h2 class="mb20">
+            Why choose
+            <span class="text-second text-bold"> AlifSense</span>?
+          </h2>
+          <p>
+            Our team is committed to providing high-quality software solutions and exceptional customer service to help
+            our customers achieve their goals.
+          </p>
+          <div class="itm-media-object mt40 tilt-3d">
+            <div class="media">
+              <div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000">
+                <Image width={100} height={100} src="/images/icons/computers.svg" alt="icon" class="layer" />
+              </div>
+              <div class="media-body">
+                <h4>Experienced and skilled developers</h4>
+                <p>
+                  We have a team of experienced and skilled developers who are dedicated to creating high-quality
+                  software solutions that are tailored to our customers&apos; unique needs and goals.
+                </p>
+              </div>
+            </div>
+            <div class="media mt40">
+              <div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000">
+                <Image width={100} height={100} src="/images/icons/worker.svg" alt="icon" class="layer" />
+              </div>
+              <div class="media-body">
+                <h4>Wide range of software solutions</h4>
+                <p>
+                  We offer a wide range of software solutions, including custom development, Ecommerce integration and
+                  ongoing maintenance and support..
+                </p>
+              </div>
+            </div>
+            <div class="media mt40">
+              <div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000">
+                <Image width={100} height={100} src="/images/icons/deal.svg" alt="icon" class="layer" />
+              </div>
+              <div class="media-body">
+                <h4>Latest technologies and best practices</h4>
+                <p>
+                  We use the latest technologies and best practices to ensure that our software solutions are reliable,
+                  secure, and user-friendly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div
+          data-tilt
+          data-tilt-max="5"
+          data-tilt-speed="1000"
+          class="single-image bg-shape-dez wow fadeIn"
+          data-wow-duration="2s"
+        >
+          <Image src={img3} alt="image" class="w-100" />
+        </div>
+        <p class="text-center mt30">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+          standard dummy text ever since the 1500s.
+        </p>
+        <div class="cta-card mt60 text-center">
+          <h3 class="mb20">Let's Start a <span class="text-second text-bold">New Project</span> Together</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet ligula nec leo elementum semper.</p>
+          <a href="#" class="alifsense-btn1 mt30"
+            ><span>Request A Quote <i class="fas fa-chevron-right fa-icon"></i></span></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* <!--End why choose--> */}
+
+{/* <!--Start Portfolio--> */}
+<section class="portfolio-section-nx pad-tb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="common-heading">
+          <span>Our Work</span>
+          <h2 class="mb0">Our Latest Creative Work</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row mt60">
+      <div class="col-lg-12 col-sm-12 wptbb">
+        <div class="pbwide shadow bg-gradient1">
+          <div class="portfolio-item-info-tt">
+            <div class="logowide mb20">
+              <img src="images/client/customer-logo-5.png" alt="logo" class="img-fluid" />
+            </div>
+            <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span></div>
+            <h3 class="mt30 mb30">Weather & Radar - Accurate Weather Forecast</h3>
+            <ul class="info-list-ul">
+              <li>Product Strategy</li>
+              <li>Product UI/UX Design</li>
+              <li>Branding Design</li>
+              <li>Design System</li>
+            </ul>
+            <a href="#" class="btn-outline lnk mt30"
+              >View Case Study <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a
+            >
+          </div>
+          <div class="portfolio-wide-image">
+            <div class="img-wide-blocktt tilt-outer">
+              <div
+                class="innerwidedevice tilt-inner"
+                data-tilt
+                data-tilt-max="4"
+                data-tilt-speed="1000"
+                data-tilt-perspective="2000"
+              >
+                <div class="desktopblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-1.jpg" alt="img" class="img-fluid" />
+                </div>
+                <div class="mobileblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-1a.jpg" alt="img" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-sm-12 wptbb">
+        <div class="pbwide shadow bg-gradient2">
+          <div class="portfolio-item-info-tt">
+            <div class="logowide mb20">
+              <img src="images/client/customer-logo-3.png" alt="logo" class="img-fluid" />
+            </div>
+            <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span></div>
+            <h3 class="mt30 mb30">Rethinking how we find & hire photographer</h3>
+            <ul class="info-list-ul">
+              <li>Product Strategy</li>
+              <li>Product UI/UX Design</li>
+              <li>Branding Design</li>
+              <li>Design System</li>
+            </ul>
+            <a href="#" class="btn-outline lnk mt30"
+              >View Case Study <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a
+            >
+          </div>
+          <div class="portfolio-wide-image">
+            <div class="img-wide-blocktt tilt-outer">
+              <div
+                class="innerwidedevice tilt-inner"
+                data-tilt
+                data-tilt-max="4"
+                data-tilt-speed="1000"
+                data-tilt-perspective="2000"
+              >
+                <div class="desktopblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-2.jpg" alt="img" class="img-fluid" />
+                </div>
+                <div class="mobileblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-2a.jpg" alt="img" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-sm-12 wptbb">
+        <div class="pbwide shadow bg-gradient3">
+          <div class="portfolio-item-info-tt">
+            <div class="logowide mb20">
+              <img src="images/client/customer-logo-7.png" alt="logo" class="img-fluid" />
+            </div>
+            <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span></div>
+            <h3 class="mt30 mb30">Rethinking how we find & hire photographer</h3>
+            <ul class="info-list-ul">
+              <li>Product Strategy</li>
+              <li>Product UI/UX Design</li>
+              <li>Branding Design</li>
+              <li>Design System</li>
+            </ul>
+            <a href="#" class="btn-outline lnk mt30"
+              >View Case Study <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a
+            >
+          </div>
+          <div class="portfolio-wide-image">
+            <div class="img-wide-blocktt tilt-outer">
+              <div
+                class="innerwidedevice tilt-inner"
+                data-tilt
+                data-tilt-max="4"
+                data-tilt-speed="1000"
+                data-tilt-perspective="2000"
+              >
+                <div class="desktopblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-3.jpg" alt="img" class="img-fluid" />
+                </div>
+                <div class="mobileblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-3a.jpg" alt="img" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-sm-12 wptbb">
+        <div class="pbwide shadow bg-gradient4">
+          <div class="portfolio-item-info-tt">
+            <div class="logowide mb20">
+              <img src="images/client/customer-logo-5.png" alt="logo" class="img-fluid" />
+            </div>
+            <div class="widebloktag"><span>Design</span> <span>Coding</span> <span>Design</span></div>
+            <h3 class="mt30 mb30">Rethinking how we find & hire photographer</h3>
+            <ul class="info-list-ul">
+              <li>Product Strategy</li>
+              <li>Product UI/UX Design</li>
+              <li>Branding Design</li>
+              <li>Design System</li>
+            </ul>
+            <a href="#" class="btn-outline lnk mt30"
+              >View Case Study <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a
+            >
+          </div>
+          <div class="portfolio-wide-image">
+            <div class="img-wide-blocktt tilt-outer">
+              <div
+                class="innerwidedevice tilt-inner"
+                data-tilt
+                data-tilt-max="4"
+                data-tilt-speed="1000"
+                data-tilt-perspective="2000"
+              >
+                <div class="desktopblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-4.jpg" alt="img" class="img-fluid" />
+                </div>
+                <div class="mobileblock shadow1">
+                  <img src="images/portfolio/portfolio-wide-4a.jpg" alt="img" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* <!--End Portfolio--> */}
+
+{/* <!--Start contact--> */}
+<section class="contact--block bg-gradient1 pad-tb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5">
+        <div class="common-heading text-l text-wt">
+          <h2 class="mb0">Interested in working with us?</h2>
+          <p>LET’S TALK AND GET STARTED</p>
+        </div>
+        <div class="contact-fields">
+          <div class="connect-block mt40">
+            <a href="mailto:info@abcd.com" tabindex="-1">
+              <div class="icon-fld-nx v-center">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="text-fld-nx v-center">
+                <span class="small-text rows">mail to our hr department</span>
+                <span class="large-text rows">info@alifsense.company.com</span>
+              </div>
+            </a>
+          </div>
+          <div class="connect-block mt30">
+            <a href="tel:12345679" class="transition" tabindex="-1">
+              <div class="icon-fld-nx v-center">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="text-fld-nx v-center">
+                <span class="small-text rows">Our contact Number</span>
+                <span class="large-text rows">(91) 123 456 7890</span>
+              </div>
+            </a>
+          </div>
+          <div class="text-fieds- mt40">
+            <h4>& What's you will get :</h4>
+            <ul class="list-style- mt10">
+              <li>Excellent Customer Support</li>
+              <li>Project Consulting by Experts</li>
+              <li>On-Time Project Delivery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="contact-form-card-pr contact-block-btm">
+          <div class="form-block">
+            <form action="#" id="quotes-form" method="post">
+              <div class="fieldsets row">
+                <div class="col-md-6 form-group floating-label">
+                  <input type="text" placeholder=" " required="required" class="floating-input" />
+                  <label>Full Name*</label>
+                </div>
+                <div class="col-md-6 form-group floating-label">
+                  <input type="email" placeholder=" " required="required" class="floating-input" />
+                  <label>Email Address*</label>
+                </div>
+              </div>
+              <div class="fieldsets row">
+                <div class="col-md-6 form-group floating-label">
+                  <input type="tel" placeholder=" " required="required" class="floating-input" />
+                  <label>Mobile Number*</label>
+                </div>
+                <div class="col-md-6 form-group floating-label">
+                  <select required="required" class="floating-select">
+                    <option value="">&nbsp;</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Web Design">Web Design</option>
+                    <option value="App Design">App Design</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <label>Interested In*</label>
+                </div>
+              </div>
+              <div class="fieldsets row">
+                <div class="col-md-6 form-group floating-label">
+                  <select required="required" class="floating-select">
+                    <option value="">&nbsp;</option>
+                    <option value="#">Less than $500</option>
+                    <option value="#">$500 - $1000</option>
+                    <option value="#">$1000 - $2000</option>
+                    <option value="#">$2000 - $300</option>
+                    <option value="#">$3000+</option>
+                  </select>
+                  <label>Your Budget*</label>
+                </div>
+                <div class="col-md-6 form-group floating-label">
+                  <input type="text" placeholder=" " required="required" class="floating-input" />
+                  <label>Skype ID/Whatsapp No.*</label>
+                </div>
+              </div>
+              <div class="fieldsets row">
+                <div class="col-md-12 form-group floating-label">
+                  <textarea placeholder=" " required="required" class="floating-input"></textarea>
+                  <label>Message*</label>
+                </div>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="customCheck"
+                  name="example1"
+                  checked="checked"
+                />
+                <label class="custom-control-label" for="customCheck"
+                  >I agree to the <a href="javascript:void(0)">Terms &amp; Conditions</a> of Business Name.</label
+                >
+              </div>
+              <div class="fieldsets mt20">
+                <button type="submit" name="submit" class="lnk btn-main bg-btn"
+                  >Submit <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button
+                >
+              </div>
+              <p class="trm"><i class="fas fa-lock"></i>We hate spam, and we respect your privacy.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{/* <!--End contact--> */}
