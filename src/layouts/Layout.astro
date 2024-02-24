@@ -3,6 +3,8 @@ import '../styles/globals.css';
 import '../styles/bootstrap.min.css';
 import '../styles/plugin.min.css';
 import '../styles/style.css';
+import '../styles/all.min.css';
+
 import '../styles/responsive.css';
 import '../styles/darkmode.css';
 
@@ -33,14 +35,16 @@ const {
 } = Astro.props as Props;
 ---
 
-<html lang="en" data-wf-page="64bfe8a9dae517c64fcaa4ea" data-wf-site="64b117fb0e09e8ce5768e4fe">
+<html lang="en">
   <head>
     <SEO {...{ title, description, siteName, canonical, ogImage, ogType, twitterHandle, slug }} />
     <ViewTransitions fallback="swap" />
     <!-- <script src="../scripts/gsap"></script> -->
+
+    <base href="/" />
   </head>
 
-  <body class="">
+  <body>
     <!--Start Preloader -->
     <div class="onloadpage" id="page_loader">
       <div class="pre-content">
@@ -57,9 +61,9 @@ const {
     <script is:inline src="/js/bootstrap.bundle.min.js"></script>
     <script is:inline src="/js/plugin.min.js"></script>
     <script is:inline src="/js/preloader.js"></script>
+    <script is:inline async src="/js/typer.js"></script>
 
     <script is:inline src="/js/dark-mode.js"></script>
     <script is:inline src="/js/main.js"></script>
-    <script is:inline src="//js-eu1.hs-scripts.com/143778338.js" id="hs-script-loader"></script>
   </body>
 </html>

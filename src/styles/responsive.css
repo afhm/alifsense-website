@@ -219,10 +219,10 @@
     margin: 0 auto;
     display: block;
   }
-  .niwaxbtnvideo a {
+  .alifsensebtnvideo a {
     margin: 0;
   }
-  .niwaxbtnvideo {
+  .alifsensebtnvideo {
     justify-content: center;
   }
   .formcover {
@@ -231,15 +231,15 @@
   .alifsense-company-awards {
     grid-template-columns: 100%;
   }
-  .whychooseniwax {
+  .whychoosealifsense {
     grid-template-columns: auto;
     grid-gap: 60px;
   }
-  .niwaxawardrow1 {
+  .alifsenseawardrow1 {
     display: flex;
     justify-content: space-between;
   }
-  .niwaxawardrow1 div + div {
+  .alifsenseawardrow1 div + div {
     margin-top: 0;
   }
   .pairofbtn a {
@@ -1229,7 +1229,7 @@
   .awardbgwithtext p {
     white-space: break-spaces;
   }
-  .niwaxawardrow1 {
+  .alifsenseawardrow1 {
     white-space: nowrap;
     overflow: auto;
     display: grid;
