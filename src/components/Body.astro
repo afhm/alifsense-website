@@ -1,14 +1,33 @@
 ---
 import { Image } from 'astro:assets';
 import GridImage from '@components/GridImage.astro';
-import { tinaField } from 'tinacms/dist/react';
 import client from '../../tina/__generated__/client';
 const portfolioData = await client.queries.portfolio_section({ relativePath: 'portfolio.json' });
 import img3 from '../assets/Images/new_images/image1.jpg';
+import { tinaField } from 'tinacms/dist/react';
 
-const portfolioArray = Object.keys(portfolioData.data.hero_section)
-  .filter((key) => key.startsWith('client_'))
-  .map((key) => ({ key, value: portfolioData.data.hero_section[key] }));
+// const portfolioArray = Object.keys(portfolioData.data.portfolio_section).map((key) => ({
+//   key,
+//   value: portfolioData.data.portfolio_section[key],
+// }));
+
+const portfolioArray = portfolioData.data.portfolio_section.portfolioImages;
+
+console.log(portfolioArray, 'portfolioArray');
+
+const image1Props = {
+  width: 260,
+  height: 551,
+  widths: [260, 260, 260, 260],
+  sizes: `(max-width: 340px) 260px, (max-width: 720px) 260px, (max-width: 1600px) 260px, 260`,
+};
+
+const image2Props = {
+  width: 640,
+  height: 410,
+  widths: [260, 640, 640, 640],
+  sizes: `(max-width: 340px) 260px, (max-width: 720px) 640px, (max-width: 1600px) 640px, 640`,
+};
 ---
 
 {/* <!--Mobile contact--> */}
@@ -331,6 +350,7 @@ const portfolioArray = Object.keys(portfolioData.data.hero_section)
 {/* <!--End why choose--> */}
 
 {/* <!--Start Portfolio--> */}
+
 <section class="portfolio-section-nx pad-tb">
   <div class="container">
     <div class="row justify-content-center">
@@ -344,15 +364,77 @@ const portfolioArray = Object.keys(portfolioData.data.hero_section)
     <div class="row mt60">
       {
         portfolioArray.map((item) => {
+          console.log(item, 'afham');
           return (
-            <div class="image-wrapper" data-tina-field={tinaField(heroData, item.key)}>
-              <GridImage heroData={heroData} img={item.key} />
-            </div>
+            <>
+              <div class="col-lg-12 col-sm-12 wptbb">
+                <div class="pbwide shadow bg-gradient1">
+                  <div class="portfolio-item-info-tt">
+                    <div class="logowide mb20">
+                      <img src="images/client/customer-logo-5.png" alt="logo" class="img-fluid" />
+                    </div>
+                    <div class="widebloktag">
+                      <span>Design</span> <span>Coding</span> <span>Design</span>
+                    </div>
+                    <h3 class="mt30 mb30">Weather & Radar - Accurate Weather Forecast</h3>
+                    <ul class="info-list-ul">
+                      <li>Product Strategy</li>
+                      <li>Product UI/UX Design</li>
+                      <li>Branding Design</li>
+                      <li>Design System</li>
+                    </ul>
+                    <a href="#" class="btn-outline lnk mt30">
+                      View Case Study
+                      <>
+                        <i class="fas fa-chevron-right fa-icon" />
+                        <span class="circle" />
+                      </>
+                    </a>
+                  </div>
+                  <div class="portfolio-wide-image">
+                    <div class="img-wide-blocktt tilt-outer">
+                      <div
+                        class="innerwidedevice tilt-inner"
+                        data-tilt
+                        data-tilt-max="4"
+                        data-tilt-speed="1000"
+                        data-tilt-perspective="2000"
+                      >
+                        <div
+                          class="desktopblock shadow1"
+                          data-tina-field={tinaField(portfolioData, item.desktopPortfolio)}
+                        >
+                          <GridImage
+                            wrapperClass="max-w-full h-[360px]"
+                            imageProps={image2Props}
+                            imgClass="h-full"
+                            tinaData={portfolioData}
+                            img={item.desktopPortfolio}
+                          />
+                        </div>
+                        <div
+                          class="mobileblock shadow1"
+                          data-tina-field={tinaField(portfolioData, item.mobilePortfolio)}
+                        >
+                          <GridImage
+                            wrapperClass="max-w-full h-[360px]"
+                            imageProps={image1Props}
+                            imgClass="h-full"
+                            tinaData={portfolioData.data}
+                            img={item.mobilePortfolio}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </>
           );
         })
       }
 
-      <div class="col-lg-12 col-sm-12 wptbb">
+      <!-- <div class="col-lg-12 col-sm-12 wptbb">
         <div class="pbwide shadow bg-gradient1">
           <div class="portfolio-item-info-tt">
             <div class="logowide mb20">
@@ -384,13 +466,14 @@ const portfolioArray = Object.keys(portfolioData.data.hero_section)
                 </div>
                 <div class="mobileblock shadow1">
                   <img src="images/portfolio/portfolio-wide-1a.jpg" alt="img" class="img-fluid" />
+                  <Image src={img3} alt="image" class="w-100" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
+      </div> -->
+      <!-- 
       <div class="col-lg-12 col-sm-12 wptbb">
         <div class="pbwide shadow bg-gradient2">
           <div class="portfolio-item-info-tt">
@@ -506,7 +589,7 @@ const portfolioArray = Object.keys(portfolioData.data.hero_section)
             </div>
           </div>
         </div>
-      </div>
+      </div>   -->
     </div>
   </div>
 </section>
@@ -524,13 +607,13 @@ const portfolioArray = Object.keys(portfolioData.data.hero_section)
         </div>
         <div class="contact-fields">
           <div class="connect-block mt40">
-            <a href="mailto:info@abcd.com" tabindex="-1">
+            <a href="mailto:info@alifsense.com" tabindex="-1">
               <div class="icon-fld-nx v-center">
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="text-fld-nx v-center">
-                <span class="small-text rows">mail to our hr department</span>
-                <span class="large-text rows">info@alifsense.company.com</span>
+                <span class="small-text rows">Mail us</span>
+                <span class="large-text rows">info@alifsense.com</span>
               </div>
             </a>
           </div>
@@ -546,7 +629,7 @@ const portfolioArray = Object.keys(portfolioData.data.hero_section)
             </a>
           </div>
           <div class="text-fieds- mt40">
-            <h4>& What's you will get :</h4>
+            <h4>What you will get :</h4>
             <ul class="list-style- mt10">
               <li>Excellent Customer Support</li>
               <li>Project Consulting by Experts</li>

@@ -1,7 +1,7 @@
 import { tinaField, useTina } from 'tinacms/dist/react';
 
-export const EditableImage = ({ heroData, img, children }) => {
-  const { data } = useTina(heroData);
-  const { hero_section } = data;
-  return <div data-tina-field={tinaField(hero_section, img)}>{children}</div>;
+export const EditableImage = ({ portfolioData, img, children }) => {
+  const { data } = useTina(portfolioData);
+  const { portfolioImages } = data;
+  return <div data-tina-field={tinaField(portfolioImages, img)}>{children}</div>;
 };

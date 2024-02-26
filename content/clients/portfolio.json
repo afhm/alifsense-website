@@ -1,6 +1,26 @@
 {
-  "client_img_1": "/src/assets/2.png",
-  "client_img_2": "/src/assets/3.png",
-  "client_img_3": "/src/assets/Images/i3.jpg",
-  "client_img_4": "/src/assets/Images/i1.jpg"
+  "portfolioImages": [
+    { 
+      "name":"P1",
+      "desktopPortfolio": "/src/assets/Images/portfolio/p1d.png",
+      "mobilePortfolio": "/src/assets/Images/portfolio/p1m.png" 
+    },
+    {
+      "desktopPortfolio": "/src/assets/Images/portfolio/p2d.png",
+      "mobilePortfolio": "/src/assets/Images/portfolio/p2m.jpeg" 
+
+    },
+    {
+      "desktopPortfolio": "/src/assets/Images/portfolio/p3d.png",
+      "mobilePortfolio": "/src/assets/Images/portfolio/p3m.jpeg" 
+
+    },
+    {
+      "desktopPortfolio": "/src/assets/Images/portfolio/p4d.png",
+      "mobilePortfolio": "/src/assets/Images/portfolio/p4m.jpeg" 
+    }
+
+
+  ],
+  "_template": "portfolioImages"
 }

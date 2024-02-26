@@ -6,24 +6,21 @@ import { tinaField } from 'tinacms/dist/react';
 const { tinaData, img, imageProps, imgClass, wrapperClass, loadingType, fetchpriority } = Astro.props;
 
 const { data } = tinaData;
-const { hero_section, clients_logo_section, our_works_section } = data;
 ---
 
 <div class={wrapperClass} data-tina-field={tinaField(tinaData, img)}>
-  <EditableImage client:tina heroData={tinaData} img={img}>
-    <Picture
-      src={(hero_section && hero_section[img]) ||
-        (clients_logo_section && clients_logo_section[img]) ||
-        (our_works_section && our_works_section[img])}
-      width={(imageProps && imageProps.width) || '1'}
-      height={(imageProps && imageProps.height) || '1'}
-      widths={imageProps && imageProps.widths}
-      sizes={imageProps && imageProps.sizes}
-      alt="portfolio-1"
-      class={imgClass}
-      formats={['avif']}
-      loading={loadingType || 'lazy'}
-      fetchpriority={fetchpriority || 'auto'}
-    />
-  </EditableImage>
+  <!-- <EditableImage client:tina portfolioData={tinaData} img={img}> -->
+  <Picture
+    src={img}
+    width={(imageProps && imageProps.width) || '1'}
+    height={(imageProps && imageProps.height) || '1'}
+    widths={imageProps && imageProps.widths}
+    sizes={imageProps && imageProps.sizes}
+    alt="portfolio-1"
+    class={imgClass}
+    formats={['avif']}
+    loading={loadingType || 'lazy'}
+    fetchpriority={fetchpriority || 'auto'}
+  />
+  <!-- </EditableImage> -->
 </div>
