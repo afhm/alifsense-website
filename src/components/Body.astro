@@ -1,13 +1,14 @@
 ---
 import { Image } from 'astro:assets';
-import img1 from '../assets/Images/new_images/image6.jpg';
-import img2 from '../assets/Images/new_images/image2.jpg';
+import GridImage from '@components/GridImage.astro';
+import { tinaField } from 'tinacms/dist/react';
+import client from '../../tina/__generated__/client';
+const portfolioData = await client.queries.portfolio_section({ relativePath: 'portfolio.json' });
 import img3 from '../assets/Images/new_images/image1.jpg';
 
-import img4 from '../assets/Images/portfolio/portfolio-wide-3a.png';
-import img5 from '../assets/Images/portfolio/portfolio-wide-4.png';
-import img6 from '../assets/Images/portfolio/portfolio-wide-3.png';
-import img7 from '../assets/Images/portfolio/portfolio-wide-2.png';
+const portfolioArray = Object.keys(portfolioData.data.hero_section)
+  .filter((key) => key.startsWith('client_'))
+  .map((key) => ({ key, value: portfolioData.data.hero_section[key] }));
 ---
 
 {/* <!--Mobile contact--> */}
@@ -341,6 +342,16 @@ import img7 from '../assets/Images/portfolio/portfolio-wide-2.png';
       </div>
     </div>
     <div class="row mt60">
+      {
+        portfolioArray.map((item) => {
+          return (
+            <div class="image-wrapper" data-tina-field={tinaField(heroData, item.key)}>
+              <GridImage heroData={heroData} img={item.key} />
+            </div>
+          );
+        })
+      }
+
       <div class="col-lg-12 col-sm-12 wptbb">
         <div class="pbwide shadow bg-gradient1">
           <div class="portfolio-item-info-tt">

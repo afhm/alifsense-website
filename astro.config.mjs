@@ -24,7 +24,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.cliqbait.in",
+  site: "https://alifsense.com",
   integrations: [robotsTxt(), sitemap(), tailwind(), react()],
   image: {
     remotePatterns: [{ protocol: "https" }],
