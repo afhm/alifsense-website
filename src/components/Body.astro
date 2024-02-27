@@ -25,8 +25,8 @@ const image1Props = {
 const image2Props = {
   width: 640,
   height: 410,
-  widths: [260, 640, 640, 640],
-  sizes: `(max-width: 340px) 260px, (max-width: 720px) 640px, (max-width: 1600px) 640px, 640`,
+  widths: [360, 640, 640, 640],
+  sizes: `(max-width: 500px) 640px, (max-width: 720px) 640px, (max-width: 1600px) 640px, 640`,
 };
 ---
 
@@ -405,7 +405,7 @@ const image2Props = {
                           data-tina-field={tinaField(portfolioData, item.desktopPortfolio)}
                         >
                           <GridImage
-                            wrapperClass="max-w-full h-[360px]"
+                            wrapperClass="max-w-full h-[225px] md:h-[360px]"
                             imageProps={image2Props}
                             imgClass="h-full"
                             tinaData={portfolioData}
@@ -417,7 +417,7 @@ const image2Props = {
                           data-tina-field={tinaField(portfolioData, item.mobilePortfolio)}
                         >
                           <GridImage
-                            wrapperClass="max-w-full h-[360px]"
+                            wrapperClass="max-w-full h-[225px] md:h-[360px]"
                             imageProps={image1Props}
                             imgClass="h-full"
                             tinaData={portfolioData.data}
