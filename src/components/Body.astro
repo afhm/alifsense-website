@@ -363,12 +363,12 @@ const image2Props = {
     </div>
     <div class="row mt60">
       {
-        portfolioArray.map((item) => {
+        portfolioArray.map((item, index) => {
           console.log(item, 'afham');
           return (
             <>
               <div class="col-lg-12 col-sm-12 wptbb">
-                <div class="pbwide shadow bg-gradient1">
+                <div class={`pbwide shadow bg-gradient${index + 1}`}>
                   <div class="portfolio-item-info-tt">
                     <div class="logowide mb20">
                       <img src="images/client/customer-logo-5.png" alt="logo" class="img-fluid" />
