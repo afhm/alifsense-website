@@ -2,5 +2,5 @@
 # Full syntax: https://developers.google.com/search/docs/advanced/robots/create-robots-txt
 User-agent: *
 Allow: /
-Host: https://cliqbait.in/
-Sitemap: https://cliqbait.in/sitemap-index.xml
+Host: https://alifsense.com/
+Sitemap: https://alifsense.com/sitemap-index.xml
