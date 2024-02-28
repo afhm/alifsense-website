@@ -5420,9 +5420,9 @@ html .pb140 {
 }
 .bg-gradient12 {
   background: #3f36b9;
-  background: -moz-linear-gradient(left, #552ecd 0, #13137a 100%);
-  background: -webkit-linear-gradient(left, #552ecd 0, #13137a 100%);
-  background: linear-gradient(to right, #552ecd 0, #13137a 100%);
+  background: -moz-linear-gradient(right, #552ecd 0, #13137a 100%);
+  background: -webkit-linear-gradient(right, #552ecd 0, #13137a 100%);
+  background: linear-gradient(to left, #552ecd 0, #13137a 100%);
 }
 .bg-gradient13 {
   background: #9c27b0;
