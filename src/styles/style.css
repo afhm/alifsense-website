@@ -452,7 +452,7 @@ header .dropdown-menu {
 }
 .menu-header {
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 .right-bddr {
