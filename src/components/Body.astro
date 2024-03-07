@@ -371,6 +371,7 @@ const image2Props = {
                         alt="logo"
                         width={200}
                         height={200}
+                        loading={'eager'}
                       />
                     </div>
                     <div class="widebloktag">
@@ -408,6 +409,7 @@ const image2Props = {
                             wrapperClass="max-w-full h-[225px] md:h-[360px]"
                             imageProps={image2Props}
                             imgClass="h-full"
+                            loadingType="eager"
                             tinaData={portfolioData}
                             img={item.desktopPortfolio}
                           />
@@ -419,7 +421,7 @@ const image2Props = {
                           <GridImage
                             wrapperClass="max-w-full h-[225px] md:h-[360px]"
                             imageProps={image1Props}
-                            imgClass="h-full"
+                            loadingType="eager"
                             tinaData={portfolioData.data}
                             img={item.mobilePortfolio}
                           />
