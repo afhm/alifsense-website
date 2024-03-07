@@ -63,6 +63,16 @@ export default defineConfig({
                   }
                 },
                 fields: [
+                  {
+                    name: "name",
+                    label: "Name",
+                    type: "string",
+                  },
+                  {
+                    name: "logo",
+                    label: "Logo",
+                    type: "image",
+                  },
 
                   {
                     name: "desktopPortfolio",
