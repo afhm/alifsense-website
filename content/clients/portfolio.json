@@ -2,13 +2,13 @@
   "portfolioImages": [
     { 
       "name":"Diet & Protein Landing Page",
-      "logo": "/images/clients/dietnprotein-logo.png",
+      "logo": "/src/assets/Images/clients/dietnprotein-logo.png",
       "desktopPortfolio": "/src/assets/Images/portfolio/p1d.png",
       "mobilePortfolio": "/src/assets/Images/portfolio/p1m.png" 
     },
     {
       "name":"The Siraat School Website",
-      "logo": "/images/clients/sirat-logo.png",
+      "logo": "/src/assets/Images/clients/sirat-logo.png",
 
       "desktopPortfolio": "/src/assets/Images/portfolio/p2d.png",
       "mobilePortfolio": "/src/assets/Images/portfolio/p2m.jpeg" 
@@ -16,14 +16,14 @@
     },
     {
       "name":"Al Arwjan Logistics Website",
-      "logo": "/images/clients/arjwan-logo1.png",
+      "logo": "/src/assets/Images/clients/arjwan-logo1.png",
       "desktopPortfolio": "/src/assets/Images/portfolio/p3d.png",
       "mobilePortfolio": "/src/assets/Images/portfolio/p3m.jpeg" 
 
     },
     {
       "name":"Indo Protein Website",
-      "logo": "/images/clients/indo-logo.png",
+      "logo": "/src/assets/Images/clients/indo-logo.png",
 
       "desktopPortfolio": "/src/assets/Images/portfolio/p4d.png",
       "mobilePortfolio": "/src/assets/Images/portfolio/p4m.jpeg" 
