@@ -365,11 +365,12 @@ const image2Props = {
                 <div class={`pbwide shadow bg-gradient${index + 1}`}>
                   <div class="portfolio-item-info-tt">
                     <div class="logowide mb20">
-                      <img
-                        src={item.logo}
-                        width="200"
-                        alt="logo"
+                      <Image
                         class={`img-fluid ${index === 2 || index === 3 ? '!w-1/4' : ''}`}
+                        src={item.logo}
+                        alt="logo"
+                        width={200}
+                        height={200}
                       />
                     </div>
                     <div class="widebloktag">
