@@ -39,7 +39,7 @@ const {
 <html lang="en">
   <head>
     <SEO {...{ title, description, siteName, canonical, ogImage, ogType, twitterHandle, slug }} />
-    <ViewTransitions fallback="swap" />
+    <!-- <ViewTransitions fallback="swap" /> -->
     <!-- <script src="../scripts/gsap"></script> -->
 
     <base href="/" />
@@ -47,12 +47,12 @@ const {
 
   <body>
     <!--Start Preloader -->
-    <div class="onloadpage" id="page_loader">
+    <!-- <div class="onloadpage" id="page_loader">
       <div class="pre-content">
         <div class="logo-pre"><img src="images/logo.png" alt="Logo" class="img-fluid" /></div>
         <div class="pre-text- text-radius text-light text-animation bg-b">AlifSense - Creative Development Agency</div>
       </div>
-    </div>
+    </div> -->
     <!--End Preloader -->
     <slot />
     <script is:inline src="/js/modernizr-3.5.0.min.js"></script>
@@ -64,7 +64,5 @@ const {
 
     <script is:inline src="/js/dark-mode.js"></script>
     <script is:inline src="/js/main.js"></script>
-
-
   </body>
 </html>
