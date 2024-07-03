@@ -1,5 +1,6 @@
 ---
 import Preloader from '@components/Preloader.astro';
+import Navbar from '@components/Navbar.astro';
 import Layout from 'src/layouts/Layout.astro';
 import Header from '@components/Header.astro';
 import GlassHero from '@components/GlassHero.astro';
@@ -10,7 +11,8 @@ import WhatsAppButton from '@components/WhatsAppButton.astro';
 
 <Layout title="AlifSense">
   <Preloader />
-  <Header />
+  <Navbar />
+  <!-- <Header /> -->
   <GlassHero />
   <ServiceCards />
   <Footer />

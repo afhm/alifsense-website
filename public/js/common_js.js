@@ -56,21 +56,21 @@
 // });
 
 // ------ sidemenu 1 ------
-// $(".side_menu_btn").on("click", function() {
-//     $(this).toggleClass("active");
-//     $("#side_menu").toggleClass("show");
-//     $(".side_overlay").toggleClass("show");
-// })
+$('.side_menu_btn').on('click', function () {
+  $(this).toggleClass('active');
+  $('#side_menu').toggleClass('show');
+  $('.side_overlay').toggleClass('show');
+});
 
-// $(".side_menu_cls").on("click", function() {
-//     $("#side_menu").removeClass("show");
-//     $(".side_overlay").removeClass("show");
-// })
+$('.side_menu_cls').on('click', function () {
+  $('#side_menu').removeClass('show');
+  $('.side_overlay').removeClass('show');
+});
 
-// $(".side_overlay").on("click", function() {
-//     $("#side_menu").removeClass("show");
-//     $(this).removeClass("show");
-// })
+$('.side_overlay').on('click', function () {
+  $('#side_menu').removeClass('show');
+  $(this).removeClass('show');
+});
 
 // -------- counter --------
 // $('.counter').countUp({
@@ -79,23 +79,23 @@
 // });
 
 //   /* ==  Button Animation  == */
-// $( ".button_su_inner" ).mouseenter(function(e) {
-//     var parentOffset = $(this).offset();
-//     var relX = e.pageX - parentOffset.left;
-//     var relY = e.pageY - parentOffset.top;
-//     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
-//     $(this).prev(".su_button_circle").removeClass("desplode-circle");
-//     $(this).prev(".su_button_circle").addClass("explode-circle");
-// });
+$('.button_su_inner').mouseenter(function (e) {
+  var parentOffset = $(this).offset();
+  var relX = e.pageX - parentOffset.left;
+  var relY = e.pageY - parentOffset.top;
+  $(this).prev('.su_button_circle').css({ left: relX, top: relY });
+  $(this).prev('.su_button_circle').removeClass('desplode-circle');
+  $(this).prev('.su_button_circle').addClass('explode-circle');
+});
 
-// $( ".button_su_inner" ).mouseleave(function(e) {
-//     var parentOffset = $(this).offset();
-//     var relX = e.pageX - parentOffset.left;
-//     var relY = e.pageY - parentOffset.top;
-//     $(this).prev(".su_button_circle").css({"left": relX, "top": relY });
-//     $(this).prev(".su_button_circle").removeClass("explode-circle");
-//     $(this).prev(".su_button_circle").addClass("desplode-circle");
-// });
+$('.button_su_inner').mouseleave(function (e) {
+  var parentOffset = $(this).offset();
+  var relX = e.pageX - parentOffset.left;
+  var relY = e.pageY - parentOffset.top;
+  $(this).prev('.su_button_circle').css({ left: relX, top: relY });
+  $(this).prev('.su_button_circle').removeClass('explode-circle');
+  $(this).prev('.su_button_circle').addClass('desplode-circle');
+});
 // });
 
 // ------------ Preloader -----------
