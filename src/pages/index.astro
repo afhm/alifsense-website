@@ -1,6 +1,6 @@
 ---
+import Preloader from '@components/Preloader.astro';
 import Layout from 'src/layouts/Layout.astro';
-import Body from '@components/Body.astro';
 import Header from '@components/Header.astro';
 import GlassHero from '@components/GlassHero.astro';
 import ServiceCards from '@components/ServiceCards.astro';
@@ -8,11 +8,11 @@ import Footer from '@components/Footer.astro';
 import WhatsAppButton from '@components/WhatsAppButton.astro';
 ---
 
-<Layout title="Creative Design Agency">
+<Layout title="AlifSense">
+  <Preloader />
   <Header />
   <GlassHero />
   <ServiceCards />
-  <Body />
   <Footer />
   <WhatsAppButton />
 </Layout>

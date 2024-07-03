@@ -1,6 +1,7 @@
 ---
+import '../styles/all.css';
 import '../styles/globals.css';
-import '../styles/bootstrap.min.css';
+// import '../styles/bootstrap.min.css';
 import '../styles/plugin.min.css';
 import '../styles/style.css';
 import '../styles/all.min.css';
@@ -55,11 +56,12 @@ const {
     </div> -->
     <!--End Preloader -->
     <slot />
-    <script is:inline src="/js/modernizr-3.5.0.min.js"></script>
-    <script is:inline src="/js/jquery.min.js"></script>
     <script is:inline src="/js/bootstrap.bundle.min.js"></script>
+    <script is:inline src="/js/gsap.min.js"></script>
+    <script is:inline src="/js/jquery.min.js"></script>
+    <script is:inline src="/js/common_js.js"></script>
+    <script is:inline src="/js/modernizr-3.5.0.min.js"></script>
     <script is:inline src="/js/plugin.min.js"></script>
-    <script is:inline src="/js/preloader.js"></script>
     <script is:inline async src="/js/typer.js"></script>
 
     <script is:inline src="/js/dark-mode.js"></script>

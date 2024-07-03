@@ -1,16 +1,14 @@
 ---
-import { Picture } from 'astro:assets';
-import { EditableImage } from './EditableImage';
-import { tinaField } from 'tinacms/dist/react';
+// import { Picture } from 'astro:assets';
+// import { EditableImage } from './EditableImage';
+// import { tinaField } from 'tinacms/dist/react';
 
-const { tinaData, img, imageProps, imgClass, wrapperClass, loadingType, fetchpriority } = Astro.props;
+// const { tinaData, img, imageProps, imgClass, wrapperClass, loadingType, fetchpriority } = Astro.props;
 
-const { data } = tinaData;
+// const { data } = tinaData;
 ---
 
-<div class={wrapperClass} data-tina-field={tinaField(tinaData, img)}>
-  <!-- <EditableImage client:tina portfolioData={tinaData} img={img}> -->
-  <Picture
+<!-- <div class={wrapperClass} data-tina-field={tinaField(tinaData, img)}> --><!-- <EditableImage client:tina portfolioData={tinaData} img={img}> --><!-- <Picture
     src={img}
     width={(imageProps && imageProps.width) || '1'}
     height={(imageProps && imageProps.height) || '1'}
@@ -21,6 +19,4 @@ const { data } = tinaData;
     formats={['avif']}
     loading={loadingType || 'lazy'}
     fetchpriority={fetchpriority || 'auto'}
-  />
-  <!-- </EditableImage> -->
-</div>
+  /> --><!-- </EditableImage> --><!-- </div> -->
