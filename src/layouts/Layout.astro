@@ -5,6 +5,7 @@ import '../styles/all.min.css';
 
 import SEO from '../components/SEO.astro';
 import { ViewTransitions } from 'astro:transitions';
+import MouseCursor from '@components/MouseCursor.astro';
 
 export interface Props {
   title?: string;
@@ -47,20 +48,32 @@ const {
       </div>
     </div> -->
     <!--End Preloader -->
+    <MouseCursor />
+
     <slot />
-    <!-- <script is:inline src="/js/bootstrap.bundle.min.js"></script> -->
+    <!-- request  -->
+    <script is:inline src="/js/jquery-3.0.0.min.js"></script>
+    <script is:inline src="/js/jquery-migrate-3.0.0.min.js"></script>
     <script is:inline src="/js/gsap.min.js"></script>
-    <script is:inline src="/js/jquery.min.js"></script>
-    <script is:inline src="/js/common_js.js"></script>
+    <script is:inline src="/js/bootstrap.min.js"></script>
+    <script is:inline src="/js/wow.min.js"></script>
+    <script is:inline src="/js/jquery.fancybox.js"></script>
+    <script is:inline src="/js/lity.js"></script>
+    <script is:inline src="/js/swiper8-bundle.min.js"></script>
+    <script is:inline src="/js/jquery.waypoints.min.js"></script>
+    <script is:inline src="/js/jquery.counterup.js"></script>
+    <script is:inline src="/js/parallaxie.js"></script>
+
+    <!-- ===gsap=== -->
+
+    <script is:inline src="/js/gsap.min.js"></script>
     <script is:inline src="/js/ScrollSmoother.js"></script>
     <script is:inline src="/js/ScrollTrigger.js"></script>
-    <script is:inline src="/js./jquery.fancybox.js"></script>
+    <script is:inline src="/js/SplitText.min.js"></script>
 
-    <script is:inline src="/js/modernizr-3.5.0.min.js"></script>
-    <script is:inline src="/js/plugin.min.js"></script>
-    <script is:inline async src="/js/typer.js"></script>
+    <!-- === home scripts === -->
 
-    <script is:inline src="/js/dark-mode.js"></script>
-    <script is:inline src="/js/main.js"></script>
+    <script is:inline src="/js/common_js.js"></script>
+    <script is:inline src="/js/home_1_scripts.js"></script>
   </body>
 </html>
