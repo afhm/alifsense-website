@@ -1,17 +1,11 @@
 ---
-import '../styles/globals.css';
-import '../styles/bootstrap.min.css';
-import '../styles/plugin.min.css';
-import '../styles/style.css';
+import '../styles/all.css';
+// import '../styles/style.css';
 import '../styles/all.min.css';
 
-import '../styles/responsive.css';
-import '../styles/darkmode.css';
-import '../styles/brands.css';
-
-// import '../styles/all.min.css';
 import SEO from '../components/SEO.astro';
 import { ViewTransitions } from 'astro:transitions';
+import MouseCursor from '@components/MouseCursor.astro';
 
 export interface Props {
   title?: string;
@@ -45,7 +39,7 @@ const {
     <base href="/" />
   </head>
 
-  <body>
+  <body class="home-style1 bg-light1 dark-theme">
     <!--Start Preloader -->
     <!-- <div class="onloadpage" id="page_loader">
       <div class="pre-content">
@@ -54,15 +48,32 @@ const {
       </div>
     </div> -->
     <!--End Preloader -->
-    <slot />
-    <script is:inline src="/js/modernizr-3.5.0.min.js"></script>
-    <script is:inline src="/js/jquery.min.js"></script>
-    <script is:inline src="/js/bootstrap.bundle.min.js"></script>
-    <script is:inline src="/js/plugin.min.js"></script>
-    <script is:inline src="/js/preloader.js"></script>
-    <script is:inline async src="/js/typer.js"></script>
+    <MouseCursor />
 
-    <script is:inline src="/js/dark-mode.js"></script>
-    <script is:inline src="/js/main.js"></script>
+    <slot />
+    <!-- request  -->
+    <script is:inline src="/js/jquery-3.0.0.min.js"></script>
+    <script is:inline src="/js/jquery-migrate-3.0.0.min.js"></script>
+    <script is:inline src="/js/gsap.min.js"></script>
+    <script is:inline src="/js/bootstrap.min.js"></script>
+    <script is:inline src="/js/wow.min.js"></script>
+    <script is:inline src="/js/jquery.fancybox.js"></script>
+    <script is:inline src="/js/lity.js"></script>
+    <script is:inline src="/js/swiper8-bundle.min.js"></script>
+    <script is:inline src="/js/jquery.waypoints.min.js"></script>
+    <script is:inline src="/js/jquery.counterup.js"></script>
+    <script is:inline src="/js/parallaxie.js"></script>
+
+    <!-- ===gsap=== -->
+
+    <script is:inline src="/js/gsap.min.js"></script>
+    <script is:inline src="/js/ScrollSmoother.js"></script>
+    <script is:inline src="/js/ScrollTrigger.js"></script>
+    <script is:inline src="/js/SplitText.min.js"></script>
+
+    <!-- === home scripts === -->
+
+    <script is:inline src="/js/common_js.js"></script>
+    <script is:inline src="/js/home_1_scripts.js"></script>
   </body>
 </html>

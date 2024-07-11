@@ -1,18 +1,27 @@
 ---
+import Preloader from '@components/Preloader.astro';
+import MouseCursor from '@components/MouseCursor.astro';
+import Navbar from '@components/Navbar.astro';
 import Layout from 'src/layouts/Layout.astro';
-import Body from '@components/Body.astro';
 import Header from '@components/Header.astro';
-import GlassHero from '@components/GlassHero.astro';
-import ServiceCards from '@components/ServiceCards.astro';
+import Services from '@components/Services.astro';
+import Partners from '@components/Partners.astro';
+import Teams from '@components/Teams.astro';
+import Awards from '@components/Awards.astro';
 import Footer from '@components/Footer.astro';
-import WhatsAppButton from '@components/WhatsAppButton.astro';
+import Portfolio from '@components/Portfolio.astro';
 ---
 
-<Layout title="Creative Design Agency">
-  <Header />
-  <GlassHero />
-  <ServiceCards />
-  <Body />
+<Layout title="AlifSense">
+  <div class="main-box-style1 bg-white radius-9 mx-4 my-3 mt-4">
+    <Preloader />
+    <Navbar />
+    <Header />
+    <Portfolio />
+  </div>
+  <Services />
+  <Partners />
+  <Teams />
+  <Awards />
   <Footer />
-  <WhatsAppButton />
 </Layout>
