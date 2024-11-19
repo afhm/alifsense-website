@@ -41,7 +41,27 @@ const {
     <SEO {...{ title, description, siteName, canonical, ogImage, ogType, twitterHandle, slug }} />
     <!-- <ViewTransitions fallback="swap" /> -->
     <!-- <script src="../scripts/gsap"></script> -->
-
+    <script type="text/javascript">
+      (function (w, d, s, u, wid, id, tid, dm) {
+        w.mxq = w.mxq || [];
+        w.mxq.push({ wid: wid, id: id, tid: tid, dm: dm });
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        js = d.createElement(s);
+        js.async = true;
+        js.src = u + '?t=' + new Date().getTime();
+        fjs.parentNode.insertBefore(js, fjs);
+      })(
+        window,
+        document,
+        'script',
+        'https://maximise.nyc3.cdn.digitaloceanspaces.com/pixel.min.js',
+        'RMieIJj0M7RIDmr7',
+        'AmCgfwmd4G5BzD5WJSb7n',
+        '673cb9110b91b5bfb672af51',
+        ['alifsense.com']
+      );
+    </script>
     <base href="/" />
   </head>
 
